@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/logo-header.png">
+    <script defer src="../app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Eco Meister Haus</title>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between h-16 md:h-18">
+ 
+                <!-- Логотип -->
+                <a href="../" class="flex items-center gap-2.5 flex-shrink-0">
+                    <img src="../images/logo-header.png" class="h-8 md:h-9" alt="Eco Meister Haus логотип">
+                    <span class="font-bold text-[#3e2723] text-base md:text-lg leading-tight">
+                        Eco<span class="text-amber-700"> Meister</span> Haus
+                    </span>
+                </a>
+ 
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
+                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Dienstleistungen</a>
+                    <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Etappen</a>
+                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Vorteile</a>
+                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Über uns</a>
+                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Projekte</a>
+                </nav>
+ 
+                <!-- Правая часть -->
+                <div class="flex items-center gap-2">
+ 
+                    <!-- Язык -->
+                    <div class="relative hidden sm:block">
+                        <button onclick="toggleLang()"
+                            class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">
+                            <span class="text-base leading-none">🌐</span>
+                            <span id="currentLang" class="font-medium">Sprache</span>
+                            <i class="fa-solid fa-chevron-down text-xs opacity-50" aria-hidden="true"></i>
+                        </button>
+                        <div id="langMenu"
+                            class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLang('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇩🇪 Deutsch</button>
+                            <button onclick="setLang('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇴 Română</button>
+                            <button onclick="setLang('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇬🇧 English</button>
+                            <button onclick="setLang('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+ 
+                    <!-- CTA кнопка (desktop) -->
+                    <a href="../contacts/" data-key="contacts"
+                        class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">
+                        Kontakte
+                    </a>
+ 
+                    <!-- Бургер (mobile) -->
+                    <button onclick="toggleMenu()"
+                        id="burgerBtn"
+                        class="lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-amber-50 transition-colors"
+                        aria-label="Menü öffnen">
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger1"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger2"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden border-t border-gray-100 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="../services/" data-key="services"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Dienstleistungen
+                </a>
+                <a href="../stages/" data-key="stages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Etappen
+                </a>
+                <a href="../advantages/" data-key="advantages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Vorteile
+                </a>
+                <a href="../about/" data-key="about"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Über uns
+                </a>
+                <a href="../projects/" data-key="projects"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Projekte
+                </a>
+                <div class="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
+                    <a href="../contacts/" data-key="contacts"
+                        class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">
+                        Kontakte
+                    </a>
+                    <!-- Sprache auf dem Handy -->
+                    <div class="relative">
+                        <button onclick="toggleLangMobile()"
+                            class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
+                            <span>🌐</span>
+                            <span id="currentLangMobile" class="font-medium">DE</span>
+                        </button>
+                        <div id="langMenuMobile"
+                            class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLangBoth('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇩🇪 Deutsch</button>
+                            <button onclick="setLangBoth('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇴 Română</button>
+                            <button onclick="setLangBoth('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">en English</button>
+                            <button onclick="setLangBoth('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+ 
+        <!-- HERO -->
+        <section class="relative h-[260px] md:h-[340px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"
+                role="img" aria-label="Преимущества Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/72"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" data-key="advantagesTitle">
+                    Unsere Vorteile
+                </h1>
+                <p class="text-white/75 text-sm md:text-lg max-w-xl" data-key="advantagesDesc">
+                    Warum Kunden Eco Meister Haus wählen
+                </p>
+            </div>
+        </section>
+ 
+        <!-- SEO INTRO -->
+        <section class="py-10 md:py-14 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="advIntro">
+                    Eco Meister Haus strukt energieeffiziente Häuser nach der SIP-Technologie in Übereinstimmung mit europäischen Standards. Wir übernehmen die volle Verantwortung für jeden Schritt — von der Planung bis zur Schlüsselübergabe — und bieten transparente Bedingungen ohne verborgene Zusatzkosten.
+                </p>
+            </div>
+        </section>
+ 
+        <!-- КАРТОЧКИ -->
+        <section class="py-14 md:py-20">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-person-digging text-amber-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv1">Vollständiger Bauprozess</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv1Desc">Von der Planung bis zur Schlüsselübergabe</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-bolt text-blue-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv2">Schnelle Konstruktion</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv2Desc">Moderne Technologien ermöglichen eine Verkürzung der Bauzeiten um 2–3 Mal</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf text-green-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv3">Ökologische Materialien</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv3Desc">Zertifizierte Materialien ohne schädliche Emissionen</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-coins text-yellow-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv4">Optimale Kosten</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv4Desc">Bestes Preis-Leistungsverhältnis auf dem Markt</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-screwdriver-wrench text-purple-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv5">Sowjetische Technologie</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv5Desc">SIP-Panele und innovative ingenieurtechnische Lösungen</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-handshake text-rose-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv6">Individueller Ansatz</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv6Desc">Wir berücksichtigen alle Wünsche des Kunden ohne Ausnahmen</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-fire-flame-simple text-teal-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv7">Energieeffizienz</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv7Desc">Klasse A+ — Energiekosten für die Beheizung um bis zu 60% reduziert</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-eu text-indigo-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv8">Europäische Standards</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv8Desc">Wir bauen nach europäischen Normen und verwenden zertifizierte Materialien</p>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- FAQ -->
+        <section class="py-12 md:py-16 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8 text-center" data-key="advFaqTitle">
+                    Häufig gestellte Fragen
+                </h2>
+                <div class="flex flex-col gap-3">
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq1Q">Wie stabil ist ein SIP-Haus im Vergleich zu einem Ziegelhaus?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq1A">
+                            SIP-paneele können Lasten aushalten, die mit Ziegelwänden vergleichbar sind, und übertreffen sie in einigen Druck- und Erdbebentests. Die Konstruktion hat sich über Jahrzehnte in Europa und Nordamerika bewährt.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq2Q">Wie energieeffizient ist ein SIP-Haus im Winter?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq2A">
+                            Dank der monolithischen Isolationschicht ohne Wärmemäntel verbraucht ein A+-haus 50–60% weniger Energie für die Heizung als ein herkömmliches Haus gleicher Größe.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq3Q">Entspricht die Konstruktion europäischen Standards?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq3A">
+                            Ja. Wir verwenden zertifizierte Materialien und arbeiten gemäß europäischer Baustandards. Alle Paneele durchlaufen eine Qualitätskontrolle vor der Lieferung zum Bauort.
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-14 md:py-20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="advCtaTitle">
+                    Überzeugt von unseren Vorteilen?
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="advCtaDesc">
+                    Kontaktieren Sie uns — wir besprechen Ihr Projekt und zeigen Ihnen, wie diese Vorteile für Sie funktionieren
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="../contacts/"
+                        class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
+                        data-key="ctaContact">
+                        Beratung erhalten
+                    </a>
+                    <a href="../projects/"
+                        class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition"
+                        data-key="ctaProjects">
+                        Projekte ansehen
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#3e2723] text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <img src="../images/logo-header.png" class="h-9" alt="Eco Meister Haus">
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-xs" data-key="footerTagline">Energieeffiziente SIP-Häuser schlüsselfertig — geplant und gebaut aus einer Hand.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerNav">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm text-white/70">
+                        <li><a href="../services/" class="hover:text-amber-400 transition" data-key="services">Dienstleistungen</a></li>
+                        <li><a href="../stages/" class="hover:text-amber-400 transition" data-key="stages">Bauphasen</a></li>
+                        <li><a href="../advantages/" class="hover:text-amber-400 transition" data-key="advantages">Vorteile</a></li>
+                        <li><a href="../about/" class="hover:text-amber-400 transition" data-key="about">Über uns</a></li>
+                        <li><a href="../projects/" class="hover:text-amber-400 transition" data-key="projects">Projekte</a></li>
+                        <li><a href="../contacts/" class="hover:text-amber-400 transition" data-key="contacts">Kontakte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerContact">Kontakt</h4>
+                    <ul class="space-y-3 text-sm text-white/70">
+                        <li><a href="tel:[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>[PHONE]</a></li>
+                        <li><a href="mailto:[EMAIL]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>[EMAIL]</a></li>
+                        <li><a href="https://wa.me/[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: [PHONE]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3b0000] py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/70">
+                © 2026 Eco Meister Haus. <span data-key="footerRights">Alle Rechte vorbehalten.</span> &middot; <a href="../datenschutz/" class="hover:text-amber-400 transition" data-key="footerPrivacy">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/logo-header.png">
+    <script defer src="../app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Eco Meister Haus</title>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between h-16 md:h-18">
+ 
+                <!-- Логотип -->
+                <a href="../" class="flex items-center gap-2.5 flex-shrink-0">
+                    <img src="../images/logo-header.png" class="h-8 md:h-9" alt="Eco Meister Haus логотип">
+                    <span class="font-bold text-[#3e2723] text-base md:text-lg leading-tight">
+                        Eco<span class="text-amber-700"> Meister</span> Haus
+                    </span>
+                </a>
+ 
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
+                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Dienstleistungen</a>
+                    <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Etappen</a>
+                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Vorteile</a>
+                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Über uns</a>
+                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Projekte</a>
+                </nav>
+ 
+                <!-- Правая часть -->
+                <div class="flex items-center gap-2">
+ 
+                    <!-- Язык -->
+                    <div class="relative hidden sm:block">
+                        <button onclick="toggleLang()"
+                            class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">
+                            <span class="text-base leading-none">🌐</span>
+                            <span id="currentLang" class="font-medium">Язык</span>
+                            <i class="fa-solid fa-chevron-down text-xs opacity-50" aria-hidden="true"></i>
+                        </button>
+                        <div id="langMenu"
+                            class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLang('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇩🇪 Deutsch</button>
+                            <button onclick="setLang('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇴 Română</button>
+                            <button onclick="setLang('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇬🇧 English</button>
+                            <button onclick="setLang('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+ 
+                    <!-- CTA кнопка (desktop) -->
+                    <a href="../contacts/" data-key="contacts"
+                        class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">
+                        Kontakte
+                    </a>
+ 
+                    <!-- Бургер (mobile) -->
+                    <button onclick="toggleMenu()"
+                        id="burgerBtn"
+                        class="lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-amber-50 transition-colors"
+                        aria-label="Открыть меню">
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger1"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger2"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden border-t border-gray-100 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="../services/" data-key="services"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Dienstleistungen
+                </a>
+                <a href="../stages/" data-key="stages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Etappen der Bauausführung
+                </a>
+                <a href="../advantages/" data-key="advantages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Vorteile
+                </a>
+                <a href="../about/" data-key="about"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Über uns
+                </a>
+                <a href="../projects/" data-key="projects"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Projekte
+                </a>
+                <div class="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
+                    <a href="../contacts/" data-key="contacts"
+                        class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">
+                        Kontakte
+                    </a>
+                    <!-- Язык на мобиле -->
+                    <div class="relative">
+                        <button onclick="toggleLangMobile()"
+                            class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
+                            <span>🌐</span>
+                            <span id="currentLangMobile" class="font-medium">DE</span>
+                        </button>
+                        <div id="langMenuMobile"
+                            class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLangBoth('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇩🇪 Deutsch</button>
+                            <button onclick="setLangBoth('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇴 Română</button>
+                            <button onclick="setLangBoth('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">en English</button>
+                            <button onclick="setLangBoth('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12 md:py-20">
+        <div class="container mx-auto px-4 max-w-2xl">
+ 
+            <div class="text-center mb-12">
+                <h1 class="text-2xl md:text-4xl font-bold text-[#3e2723] mb-4" data-key="stages">
+                    Etappen der Bauausführung
+                </h1>
+                <p class="text-gray-600" data-key="stagesDesc">
+                    Der vollständige Bauprozess vom Konzept bis zur Einzug
+                </p>
+            </div>
+ 
+            <div class="flex flex-col items-center gap-0">
+ 
+                <div class="bg-green-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage1">1. Vorbereitung des Grundstücks</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage1Desc">Fundament und Erdarbeiten</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-blue-800 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage2">2. Projektierung</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage2Desc">Architektur und Berechnungen</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-teal-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage3">3. SIP-Paneele Produktion</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage3Desc">Produktion der Konstruktionen</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-amber-800 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage4">4. Lieferung & Montage</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage4Desc">Montage des Hauses</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-orange-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage5">5. Dach</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage5Desc">Fassade und Fenster</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-purple-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage6">6. Ingenieurwesen</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage6Desc">Kommunikation</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-pink-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage7">7. Innenausbau</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage7Desc">Interior</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-gray-700 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage8">8. Prüfung</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage8Desc">Testing</p>
+                </div>
+                <div class="text-gray-400 text-2xl py-2" aria-hidden="true">↓</div>
+ 
+                <div class="bg-green-800 text-white p-5 md:p-6 rounded-xl shadow w-full">
+                    <h2 class="text-lg md:text-xl font-semibold" data-key="stage9">9. Übergabe & Einzug</h2>
+                    <p class="text-sm mt-2 opacity-90" data-key="stage9Desc">Schlüsselübergabe und Dokumente</p>
+                </div>
+            </div>
+ 
+            <!-- CTA -->
+            <div class="mt-16 text-center bg-[#f5f5f5] rounded-2xl p-8 md:p-12">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaStagesTitle">
+                    Bereit, um mit dem Bau zu beginnen?
+                </h2>
+                <p class="text-gray-600 text-sm mb-6" data-key="ctaStagesDesc">
+                    Kontaktieren Sie uns — wir besprechen Ihr Projekt und berechnen die Kosten
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="../contacts/" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition" data-key="ctaContact">
+                        Kontakt aufnehmen
+                    </a>
+                    <a href="../projects/" class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition" data-key="ctaProjects">
+                        Projekte ansehen
+                    </a>
+                </div>
+            </div>
+ 
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#3e2723] text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <img src="../images/logo-header.png" class="h-9" alt="Eco Meister Haus">
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-xs" data-key="footerTagline">Energieeffiziente SIP-Häuser schlüsselfertig — geplant und gebaut aus einer Hand.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerNav">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm text-white/70">
+                        <li><a href="../services/" class="hover:text-amber-400 transition" data-key="services">Dienstleistungen</a></li>
+                        <li><a href="../stages/" class="hover:text-amber-400 transition" data-key="stages">Bauphasen</a></li>
+                        <li><a href="../advantages/" class="hover:text-amber-400 transition" data-key="advantages">Vorteile</a></li>
+                        <li><a href="../about/" class="hover:text-amber-400 transition" data-key="about">Über uns</a></li>
+                        <li><a href="../projects/" class="hover:text-amber-400 transition" data-key="projects">Projekte</a></li>
+                        <li><a href="../contacts/" class="hover:text-amber-400 transition" data-key="contacts">Kontakte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerContact">Kontakt</h4>
+                    <ul class="space-y-3 text-sm text-white/70">
+                        <li><a href="tel:[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>[PHONE]</a></li>
+                        <li><a href="mailto:[EMAIL]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>[EMAIL]</a></li>
+                        <li><a href="https://wa.me/[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: [PHONE]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3b0000] py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/70">
+                © 2026 Eco Meister Haus. <span data-key="footerRights">Alle Rechte vorbehalten.</span> &middot; <a href="../datenschutz/" class="hover:text-amber-400 transition" data-key="footerPrivacy">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

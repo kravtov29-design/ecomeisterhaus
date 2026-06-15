@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/logo-header.png">
+    <script defer src="../app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Datenschutzerklärung — Eco Meister Haus</title>
+    <meta name="robots" content="noindex">
+</head>
+<body class="bg-white">
+
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between h-16 md:h-18">
+ 
+                <!-- Логотип -->
+                <a href="../" class="flex items-center gap-2.5 flex-shrink-0">
+                    <img src="../images/logo-header.png" class="h-8 md:h-9" alt="Eco Meister Haus логотип">
+                    <span class="font-bold text-[#3e2723] text-base md:text-lg leading-tight">
+                        Eco<span class="text-amber-700"> Meister</span> Haus
+                    </span>
+                </a>
+ 
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
+                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Dienstleistungen</a>
+                    <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Etappen</a>
+                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Vorteile</a>
+                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Über uns</a>
+                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Projekte</a>
+                </nav>
+ 
+                <!-- Правая часть -->
+                <div class="flex items-center gap-2">
+ 
+                    <!-- Язык -->
+                    <div class="relative hidden sm:block">
+                        <button onclick="toggleLang()"
+                            class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">
+                            <span class="text-base leading-none">🌐</span>
+                            <span id="currentLang" class="font-medium">Язык</span>
+                            <i class="fa-solid fa-chevron-down text-xs opacity-50" aria-hidden="true"></i>
+                        </button>
+                        <div id="langMenu"
+                            class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLang('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇩🇪 Deutsch</button>
+                            <button onclick="setLang('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇴 Română</button>
+                            <button onclick="setLang('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇬🇧 English</button>
+                            <button onclick="setLang('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+ 
+                    <!-- CTA кнопка (desktop) -->
+                    <a href="../contacts/" data-key="contacts"
+                        class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">
+                        Kontakte
+                    </a>
+ 
+                    <!-- Бургер (mobile) -->
+                    <button onclick="toggleMenu()"
+                        id="burgerBtn"
+                        class="lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-amber-50 transition-colors"
+                        aria-label="Открыть меню">
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger1"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger2"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden border-t border-gray-100 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="../services/" data-key="services"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Dienstleistungen
+                </a>
+                <a href="../stages/" data-key="stages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Bauphasen
+                </a>
+                <a href="../advantages/" data-key="advantages"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Vorteile
+                </a>
+                <a href="../about/" data-key="about"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Über uns
+                </a>
+                <a href="../projects/" data-key="projects"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Projekte
+                </a>
+                <div class="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
+                    <a href="../contacts/" data-key="contacts"
+                        class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">
+                        Kontakte
+                    </a>
+                    <!-- Sprache auf dem Handy -->
+                    <div class="relative">
+                        <button onclick="toggleLangMobile()"
+                            class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
+                            <span>🌐</span>
+                            <span id="currentLangMobile" class="font-medium">DE</span>
+                        </button>
+                        <div id="langMenuMobile"
+                            class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLangBoth('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇩🇪 Deutsch</button>
+                            <button onclick="setLangBoth('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇺 Русский</button>
+                            <button onclick="setLangBoth('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇴 Română</button>
+                            <button onclick="setLangBoth('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">en English</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow bg-white">
+        <section class="bg-[#3e2723] text-white py-14 md:py-20">
+            <div class="max-w-3xl mx-auto px-4 md:px-6">
+                <h1 class="text-3xl md:text-4xl font-bold">Datenschutzerklärung</h1>
+                <p class="text-white/60 mt-3 text-sm">Stand: [DATUM EINFÜGEN]</p>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16">
+            <div class="max-w-3xl mx-auto px-4 md:px-6 text-gray-700 leading-relaxed space-y-8 text-[15px]">
+
+                <!-- HINWEIS FÜR DEN BETREIBER: Platzhalter in eckigen Klammern [ ] mit echten Daten ersetzen und den Text rechtlich prüfen lassen. -->
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">1. Verantwortliche Stelle</h2>
+                    <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+                    <p class="mt-3">[FIRMENNAME]<br>[STRASSE UND HAUSNUMMER]<br>[PLZ ORT]<br>Deutschland</p>
+                    <p class="mt-3">Vertreten durch: [GESCHÄFTSFÜHRER/IN]<br>E-Mail: [EMAIL]<br>Telefon: [TELEFON]</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">2. Hosting</h2>
+                    <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website werden technisch notwendige Daten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite) verarbeitet, um die Auslieferung der Website zu ermöglichen. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und stabilen Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO). Die Datenübermittlung in die USA erfolgt auf Grundlage der Standardvertragsklauseln der EU-Kommission.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">3. Allgemeine Hinweise</h2>
+                    <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO) sowie dieser Datenschutzerklärung. Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis.</p>
+                    <p class="mt-3">Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol in der Adresszeile Ihres Browsers.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">4. Server-Log-Dateien</h2>
+                    <p>Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">5. Kontaktaufnahme</h2>
+                    <p>Wenn Sie uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie können Ihre Einwilligung jederzeit widerrufen.</p>
+                    <p class="mt-3"><strong>WhatsApp:</strong> Wenn Sie uns über WhatsApp kontaktieren, werden Ihre Daten gemäß den Datenschutzbestimmungen der WhatsApp Ireland Ltd. verarbeitet. Bitte beachten Sie, dass dabei Daten auch außerhalb der EU verarbeitet werden können.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">6. Cookies und Webanalyse</h2>
+                    <p>Diese Website setzt derzeit nur technisch notwendige Mittel ein. Sofern künftig Analyse- oder Marketing-Dienste (z. B. Google Analytics, Google Tag Manager, Meta-Pixel) eingesetzt werden, erfolgt dies erst nach Ihrer ausdrücklichen Einwilligung; diese Erklärung wird dann entsprechend ergänzt.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-[#3e2723] mb-3">7. Ihre Rechte</h2>
+                    <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Ebenso haben Sie das Recht auf Berichtigung, Sperrung, Löschung sowie Einschränkung der Verarbeitung, ein Widerspruchsrecht und ein Recht auf Datenübertragbarkeit. Darüber hinaus steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Hierzu sowie zu weiteren Fragen zum Datenschutz können Sie sich jederzeit an uns wenden: [EMAIL]</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-[#3e2723] text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <img src="../images/logo-header.png" class="h-9" alt="Eco Meister Haus">
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-xs" data-key="footerTagline">Energieeffiziente SIP-Häuser schlüsselfertig — geplant und gebaut aus einer Hand.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerNav">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm text-white/70">
+                        <li><a href="../services/" class="hover:text-amber-400 transition" data-key="services">Dienstleistungen</a></li>
+                        <li><a href="../stages/" class="hover:text-amber-400 transition" data-key="stages">Bauphasen</a></li>
+                        <li><a href="../advantages/" class="hover:text-amber-400 transition" data-key="advantages">Vorteile</a></li>
+                        <li><a href="../about/" class="hover:text-amber-400 transition" data-key="about">Über uns</a></li>
+                        <li><a href="../projects/" class="hover:text-amber-400 transition" data-key="projects">Projekte</a></li>
+                        <li><a href="../contacts/" class="hover:text-amber-400 transition" data-key="contacts">Kontakte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerContact">Kontakt</h4>
+                    <ul class="space-y-3 text-sm text-white/70">
+                        <li><a href="tel:[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>[PHONE]</a></li>
+                        <li><a href="mailto:[EMAIL]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>[EMAIL]</a></li>
+                        <li><a href="https://wa.me/[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: [PHONE]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3b0000] py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/70">
+                © 2026 Eco Meister Haus. <span data-key="footerRights">Alle Rechte vorbehalten.</span> &middot; <a href="../datenschutz/" class="hover:text-amber-400 transition" data-key="footerPrivacy">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
