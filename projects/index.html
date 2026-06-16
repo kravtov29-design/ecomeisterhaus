@@ -12,24 +12,9 @@
     <title>Eco Meister Haus</title>
  
     <style>
-        .gallery-track {
-            display: flex;
-            transition: transform 0.4s ease;
-        }
-        .gallery-track img {
-            min-width: 100%;
-            width: 100%;
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-        .gallery-wrap {
-            overflow: hidden;
-            position: relative;
-        }
-        @media (min-width: 1024px) {
-            .gallery-wrap { height: 82vh !important; }
-            .gallery-track img { height: 82vh; object-fit: contain; }
-        }
+        .gallery-wrap { overflow: hidden; position: relative; }
+        .gallery-track { display: flex; height: 100%; transition: transform 0.4s ease; }
+        .gallery-track img { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; object-fit: contain; }
     </style>
 </head>
 <body class="bg-white min-h-screen flex flex-col">
@@ -141,7 +126,15 @@
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-[#3e2723]" data-key="project1">Modern House</h3>
                             <p class="text-gray-500 mt-2 text-sm" data-key="project1Desc">Energy-efficient house with a modern design.</p>
-                            <button onclick="openModal('projectModal1')" class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition" data-key="viewProject">Ansehen</button>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">174 m²</div><div class="text-gray-400 text-[11px]">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">4 Monate</div><div class="text-gray-400 text-[11px]">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal1')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,7 +155,15 @@
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-[#3e2723]" data-key="project2">Landhaus</h3>
                             <p class="text-gray-500 mt-2 text-sm" data-key="project2Desc">Ein gemütlicher Haus für eine Familie im Grünen.</p>
-                            <button onclick="openModal('projectModal2')" class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition" data-key="viewProject">Ansehen</button>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">200 m²</div><div class="text-gray-400 text-[11px]">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">5 Monate</div><div class="text-gray-400 text-[11px]">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal2')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +184,15 @@
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-[#3e2723]" data-key="project3">Minimalistisches Haus</h3>
                             <p class="text-gray-500 mt-2 text-sm" data-key="project3Desc">Ein stylisches Haus in modernem Minimalismus.</p>
-                            <button onclick="openModal('projectModal3')" class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition" data-key="viewProject">Ansehen</button>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">120 m²</div><div class="text-gray-400 text-[11px]">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">3 Monate</div><div class="text-gray-400 text-[11px]">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal3')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,9 +211,9 @@
     </main>
  
     <!-- МОДАЛКА 1 -->
-    <div id="projectModal1" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50 lg:bg-black/70 lg:backdrop-blur-md">
-        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl lg:bg-transparent lg:shadow-none lg:max-w-5xl lg:max-h-none lg:overflow-visible">
-            <div class="gallery-wrap rounded-t-2xl h-60 md:h-72 lg:rounded-2xl">
+    <div id="projectModal1" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
                 <div class="gallery-track" id="gallery1">
                     <img src="../images/project1-facade-evening.jpg" alt="Modernes SIP-Haus — Fassade mit LED-Beleuchtung">
                     <img src="../images/project1-photo1.jpg" alt="Modernes SIP-Haus — Außenansicht">
@@ -229,23 +238,13 @@
                 </div>
                 <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
             </div>
-            <div class="p-6 md:p-8 lg:hidden">
-                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project1">Modernes Haus</h3>
-                <p class="text-gray-600 text-sm leading-relaxed" data-key="project1Full">Полностью энергоэффективный дом с использованием SIP-панелей и современных технологий.</p>
-                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">174 m²</div><div class="text-gray-400 text-xs mt-0.5">Fläche</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">4 Monate</div><div class="text-gray-400 text-xs mt-0.5">Dauer</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">A+</div><div class="text-gray-400 text-xs mt-0.5">Klasse</div></div>
-                </div>
-                <a href="../contacts/" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Beratung erhalten</a>
-            </div>
         </div>
     </div>
  
     <!-- МОДАЛКА 2 -->
-    <div id="projectModal2" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50 lg:bg-black/70 lg:backdrop-blur-md">
-        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl lg:bg-transparent lg:shadow-none lg:max-w-5xl lg:max-h-none lg:overflow-visible">
-            <div class="gallery-wrap rounded-t-2xl h-60 md:h-72 lg:rounded-2xl">
+    <div id="projectModal2" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
                 <div class="gallery-track" id="gallery2">
                     <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="Загородный коттедж — фасад">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Загородный коттедж — терраса">
@@ -260,23 +259,13 @@
                 </div>
                 <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
             </div>
-            <div class="p-6 md:p-8 lg:hidden">
-                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project2">Landhaus</h3>
-                <p class="text-gray-600 text-sm leading-relaxed" data-key="project2Full">Geräumiges Haus mit Terrasse und Panoramafenstern.</p>
-                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">200 m²</div><div class="text-gray-400 text-xs mt-0.5">Fläche</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">5 Monate</div><div class="text-gray-400 text-xs mt-0.5">Dauer</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">A+</div><div class="text-gray-400 text-xs mt-0.5">Klasse</div></div>
-                </div>
-                <a href="../contacts/" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Beratung erhalten</a>
-            </div>
         </div>
     </div>
  
     <!-- МОДАЛКА 3 -->
-    <div id="projectModal3" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50 lg:bg-black/70 lg:backdrop-blur-md">
-        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl lg:bg-transparent lg:shadow-none lg:max-w-5xl lg:max-h-none lg:overflow-visible">
-            <div class="gallery-wrap rounded-t-2xl h-60 md:h-72 lg:rounded-2xl">
+    <div id="projectModal3" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
                 <div class="gallery-track" id="gallery3">
                     <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Минималистичный дом — фасад">
                     <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Минималистичный дом — кухня">
@@ -290,16 +279,6 @@
                     <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
                 </div>
                 <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
-            </div>
-            <div class="p-6 md:p-8 lg:hidden">
-                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project3">Minimalistisches Haus</h3>
-                <p class="text-gray-600 text-sm leading-relaxed" data-key="project3Full">Moderner Minimalismus mit funktionalem Grundriss.</p>
-                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">120 m²</div><div class="text-gray-400 text-xs mt-0.5">Area</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">3 months</div><div class="text-gray-400 text-xs mt-0.5">Duration</div></div>
-                    <div class="bg-[#f5f5f5] rounded-xl p-3"><div class="font-bold text-[#3e2723]">A+</div><div class="text-gray-400 text-xs mt-0.5">Class</div></div>
-                </div>
-                <a href="../contacts/" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Beratung erhalten</a>
             </div>
         </div>
     </div>
