@@ -93,7 +93,7 @@
         <!-- HERO -->
         <section class="relative h-[280px] md:h-[360px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"
+                style="background-image: url('../images/project1-photo1.jpg')"
                 role="img" aria-label="Проекты домов Eco Meister Haus">
             </div>
             <div class="absolute inset-0 bg-[#3e2723]/70"></div>
@@ -119,6 +119,7 @@
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div onclick="openModal('projectModal1')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
                             <img src="../images/project1-facade-evening.jpg"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                                 alt="Modern energy-efficient house on SIP panels">
@@ -148,6 +149,7 @@
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div onclick="openModal('projectModal2')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
                             <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                                 alt="Загородный коттедж с террасой и панорамными окнами">
@@ -177,6 +179,7 @@
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div onclick="openModal('projectModal3')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                                 alt="Minimalistisches Haus in modernem Stil">
@@ -307,9 +310,9 @@
                 <div>
                     <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerContact">Kontakt</h4>
                     <ul class="space-y-3 text-sm text-white/70">
-                        <li><a href="tel:[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>[PHONE]</a></li>
-                        <li><a href="mailto:[EMAIL]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>[EMAIL]</a></li>
-                        <li><a href="https://wa.me/[PHONE]" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: [PHONE]</a></li>
+                        <li><a href="tel:+4917632291111" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>+49 176 32291111</a></li>
+                        <li><a href="mailto:info@ecomeisterhaus.de" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>info@ecomeisterhaus.de</a></li>
+                        <li><a href="https://wa.me/4917632291111" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: +49 176 32291111</a></li>
                     </ul>
                 </div>
             </div>
@@ -320,5 +323,14 @@
             </div>
         </div>
     </footer>
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/4917632291111" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 transition text-2xl">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+4917632291111" aria-label="Anrufen" title="Anrufen" class="w-14 h-14 rounded-full bg-[#3e2723] text-white flex items-center justify-center shadow-lg hover:scale-110 transition text-xl">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
 </body>
 </html>
