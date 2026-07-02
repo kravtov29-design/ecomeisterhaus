@@ -41,7 +41,15 @@
                 <!-- Desktop Nav -->
                 <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
                     <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Услуги</a>
-                    <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Этапы</a>
+                    <div class="relative group">
+                        <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200 flex items-center gap-1">Bauphasen <i class="fa-solid fa-chevron-down text-[10px] opacity-60"></i></a>
+                        <div class="absolute left-0 top-full pt-2 hidden group-hover:block min-w-[190px] z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2">
+                                <a href="../stages/" data-key="navSip" class="block px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors">SIP-Haus</a>
+                                <a href="../individualbau/" data-key="navIndiv" class="block px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors">Individueller Bau</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Преимущества</a>
                     <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">О компании</a>
                     <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Проекты</a>
@@ -95,10 +103,13 @@
                     <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
                     Dienstleistungen
                 </a>
-                <a href="../stages/" data-key="stages"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    Etappen der Bauausführung
+                <a href="../stages/" data-key="navSip" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-cubes-stacked w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    SIP-Haus
+                </a>
+                <a href="../individualbau/" data-key="navIndiv" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-trowel-bricks w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                    Individueller Bau
                 </a>
                 <a href="../advantages/" data-key="advantages"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
