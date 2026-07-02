@@ -1,6 +1,9 @@
 const translations = {
  
     ru: {
+        popupTitle: "Не знаете, какой дом выбрать?",
+        popupDesc: "Запросите бесплатную консультацию без обязательств.",
+        popupBtn: "Бесплатная консультация",
         cTitle: "Индивидуальное строительство — шаг за шагом",
         cDesc: "Ваш дом по индивидуальным меркам, классической массивной постройки — от проекта до заселения",
         cIntro: "Помимо SIP-домов мы строим индивидуальные дома в классической массивной технологии — с материалами полностью на ваш выбор. От проектирования до сдачи под ключ: всё из одних рук, по немецким стандартам.",
@@ -295,6 +298,9 @@ const translations = {
     },
  
     en: {
+        popupTitle: "Not sure which house suits you?",
+        popupDesc: "Request a free, no-obligation consultation.",
+        popupBtn: "Free consultation",
         cTitle: "Custom home building — step by step",
         cDesc: "Your home built to measure, classic solid construction — from planning to move-in",
         cIntro: "In addition to our SIP houses, we build individual homes in classic solid construction — with materials entirely of your choice. From planning to turnkey handover: all from one source, to German standards.",
@@ -589,6 +595,9 @@ const translations = {
     },
  
     ro: {
+        popupTitle: "Nu știți ce casă vi se potrivește?",
+        popupDesc: "Solicitați o consultație gratuită, fără obligații.",
+        popupBtn: "Consultație gratuită",
         cTitle: "Construcție individuală — pas cu pas",
         cDesc: "Casa dvs. la comandă, construită clasic și masiv — de la proiect până la mutare",
         cIntro: "Pe lângă casele SIP, construim case individuale în tehnologie masivă clasică — cu materiale complet la alegerea dvs. De la proiectare până la predarea la cheie: totul dintr-o singură mână, conform standardelor germane.",
@@ -857,6 +866,9 @@ const translations = {
     },
  
     de: {
+        popupTitle: "Nicht sicher, welches Haus zu Ihnen passt?",
+        popupDesc: "Fordern Sie eine kostenlose, unverbindliche Beratung an.",
+        popupBtn: "Kostenlose Beratung",
         cTitle: "Individueller Hausbau — Schritt für Schritt",
         cDesc: "Ihr Haus nach Maß, klassisch massiv gebaut — von der Planung bis zum Einzug",
         cIntro: "Neben unseren SIP-Häusern errichten wir individuelle Häuser in klassischer Massivbauweise — mit Materialien ganz nach Ihrer Wahl. Von der Planung bis zur schlüsselfertigen Übergabe: alles aus einer Hand, nach deutschen Standards.",
@@ -1320,3 +1332,7 @@ function updateGallery(id, total) {
         });
     }
 }
+
+// ===== Consult popup =====
+function closeConsult(){var p=document.getElementById('consultPopup');if(p)p.classList.add('hidden');try{sessionStorage.setItem('consultDismissed','1');}catch(e){}}
+document.addEventListener('DOMContentLoaded',function(){try{if(sessionStorage.getItem('consultDismissed'))return;}catch(e){}setTimeout(function(){var p=document.getElementById('consultPopup');if(p)p.classList.remove('hidden');},30000);});
