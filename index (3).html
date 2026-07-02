@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../images/logo-header.png">
+    <script defer src="../app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <title>Projekte — Umgesetzte SIP-Häuser | Eco Meister Haus</title>
+    <meta name="description" content="Ausgewählte umgesetzte Hausprojekte von Eco Meister Haus: moderne, energieeffiziente SIP-Häuser in Berlin &amp; Brandenburg — mit Bildern und Eckdaten.">
+    <link rel="canonical" href="https://ecomeisterhaus.de/projects/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eco Meister Haus">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:title" content="Projekte — Umgesetzte SIP-Häuser | Eco Meister Haus">
+    <meta property="og:description" content="Ausgewählte umgesetzte Hausprojekte von Eco Meister Haus: moderne, energieeffiziente SIP-Häuser in Berlin &amp; Brandenburg — mit Bildern und Eckdaten.">
+    <meta property="og:url" content="https://ecomeisterhaus.de/projects/">
+    <meta property="og:image" content="https://ecomeisterhaus.de/images/project1-facade-evening.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projekte — Umgesetzte SIP-Häuser | Eco Meister Haus">
+    <meta name="twitter:description" content="Ausgewählte umgesetzte Hausprojekte von Eco Meister Haus: moderne, energieeffiziente SIP-Häuser in Berlin &amp; Brandenburg — mit Bildern und Eckdaten.">
+    <meta name="twitter:image" content="https://ecomeisterhaus.de/images/project1-facade-evening.jpg">
+ 
+    <style>
+        .gallery-wrap { overflow: hidden; position: relative; }
+        .gallery-track { display: flex; height: 100%; transition: transform 0.4s ease; }
+        .gallery-track img { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; object-fit: contain; }
+    </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+ 
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between h-16 md:h-18">
+ 
+                <a href="../" class="flex items-center gap-2.5 flex-shrink-0">
+                    <img src="../images/logo-header.png" class="h-8 md:h-9" alt="Eco Meister Haus логотип">
+                    <span class="font-bold text-[#3e2723] text-base md:text-lg leading-tight">
+                        Eco<span class="text-amber-700"> Meister</span> Haus
+                    </span>
+                </a>
+ 
+                <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
+                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Dienstleistungen</a>
+                    <div class="relative group">
+                        <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200 flex items-center gap-1">Etappen <i class="fa-solid fa-chevron-down text-[10px] opacity-60"></i></a>
+                        <div class="absolute left-0 top-full pt-2 hidden group-hover:block min-w-[190px] z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2">
+                                <a href="../stages/" data-key="navSip" class="block px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors">SIP-Haus</a>
+                                <a href="../individualbau/" data-key="navIndiv" class="block px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors">Individueller Bau</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Vorteile</a>
+                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Über uns</a>
+                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Projekte</a>
+                </nav>
+ 
+                <div class="flex items-center gap-2">
+                    <div class="relative hidden sm:block">
+                        <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">
+                            <span class="text-base leading-none">🌐</span>
+                            <span id="currentLang" class="font-medium">Sprache</span>
+                            <i class="fa-solid fa-chevron-down text-xs opacity-50" aria-hidden="true"></i>
+                        </button>
+                        <div id="langMenu" class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                        
+                            <button onclick="setLang('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇩🇪 Deutsch</button>
+                            <button onclick="setLang('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇴 Română</button>
+                            <button onclick="setLang('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇬🇧 English</button>
+                            <button onclick="setLang('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+                    <a href="../contacts/" data-key="contacts" class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">Kontakte</a>
+                    <button onclick="toggleMenu()" id="burgerBtn" class="lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-amber-50 transition-colors" aria-label="Menü öffnen">
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger1"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger2"></span>
+                        <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+ 
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="../services/" data-key="services" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm"><i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Services</a>
+                <div>
+                    <button type="button" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.sub-chevron').classList.toggle('rotate-180')" class="w-full flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                        <i class="fa-solid fa-list-ul w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
+                        <span data-key="stages">Bauphasen</span>
+                        <i class="fa-solid fa-chevron-down sub-chevron text-xs ml-auto text-[#3e2723]/50 transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden flex-col gap-1 pl-6">
+                        <a href="../stages/" data-key="navSip" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors text-sm">
+                            <i class="fa-solid fa-cubes-stacked w-4 text-center text-[#3e2723]/40" aria-hidden="true"></i>
+                            SIP-Haus
+                        </a>
+                        <a href="../individualbau/" data-key="navIndiv" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors text-sm">
+                            <i class="fa-solid fa-trowel-bricks w-4 text-center text-[#3e2723]/40" aria-hidden="true"></i>
+                            Individueller Bau
+                        </a>
+                    </div>
+                </div>
+                <a href="../advantages/" data-key="advantages" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm"><i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Vorteile</a>
+                <a href="../about/" data-key="about" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm"><i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Über uns</a>
+                <a href="../projects/" data-key="projects" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm"><i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Projekte</a>
+                <div class="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
+                    <a href="../contacts/" data-key="contacts" class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">Kontakte</a>
+                    <div class="relative">
+                        <button onclick="toggleLangMobile()" class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
+                            <span>🌐</span><span id="currentLangMobile" class="font-medium">DE</span>
+                        </button>
+                        <div id="langMenuMobile" class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                            <button onclick="setLangBoth('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇩🇪 Deutsch</button>
+                            <button onclick="setLangBoth('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇴 Română</button>
+                            <button onclick="setLangBoth('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇬🇧 English</button>
+                            <button onclick="setLangBoth('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇺 Русский</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+    <main class="flex-grow">
+ 
+        <!-- HERO -->
+        <section class="relative h-[280px] md:h-[360px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('../images/project1-photo1.jpg')"
+                role="img" aria-label="Проекты домов Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/70"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="projectsTitle">Unsere Projekte</h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="projectsDesc">Entdecken Sie unsere umgesetzten Hausprojekte.</p>
+            </div>
+        </section>
+ 
+        <!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
+        <section class="py-6 bg-white border-b border-gray-100 sticky top-[64px] z-40">
+            <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-3 justify-center">
+                <a href="#modern" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catModern">Modern</a>
+                <a href="#country" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catCountry">Landhäuser</a>
+                <a href="#minimal" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catMinimal">Minimalismus</a>
+            </div>
+        </section>
+ 
+        <!-- СОВРЕМЕННЫЕ -->
+        <section id="modern" class="py-14 md:py-20 bg-white scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catModernTitle">Landhäuser</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div onclick="openModal('projectModal1')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
+                            <img src="../images/project1-facade-evening.jpg"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Modern energy-efficient house on SIP panels">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project1">Modern House</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project1Desc">Energy-efficient house with a modern design.</p>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">174 m²</div><div class="text-gray-400 text-[11px]" data-key="statFlaeche">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm" data-key="dur1">4 Monate</div><div class="text-gray-400 text-[11px]" data-key="statDauer">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]" data-key="statKlasse">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal1')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ЗАГОРОДНЫЕ -->
+        <section id="country" class="py-14 md:py-20 bg-[#f5f5f5] scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catCountryTitle">Landhäuser</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div onclick="openModal('projectModal2')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
+                            <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Загородный коттедж с террасой и панорамными окнами">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project2">Landhaus</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project2Desc">Ein gemütlicher Haus für eine Familie im Grünen.</p>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">200 m²</div><div class="text-gray-400 text-[11px]" data-key="statFlaeche">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm" data-key="dur2">5 Monate</div><div class="text-gray-400 text-[11px]" data-key="statDauer">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]" data-key="statKlasse">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal2')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- МИНИМАЛИЗМ -->
+        <section id="minimal" class="py-14 md:py-20 bg-white scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catMinimalTitle">Minimalistische Häuser</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div onclick="openModal('projectModal3')" class="relative overflow-hidden h-52 cursor-pointer">
+                            <span class="absolute top-3 left-3 z-10 bg-[#3e2723] text-white text-xs font-bold px-3 py-1 rounded-full shadow" data-key="badgeSip">SIP</span>
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Minimalistisches Haus in modernem Stil">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project3">Minimalistisches Haus</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project3Desc">Ein stylisches Haus in modernem Minimalismus.</p>
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">120 m²</div><div class="text-gray-400 text-[11px]" data-key="statFlaeche">Fläche</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm" data-key="dur3">3 Monate</div><div class="text-gray-400 text-[11px]" data-key="statDauer">Dauer</div></div>
+                                <div class="bg-[#f5f5f5] rounded-xl py-2.5"><div class="font-bold text-[#3e2723] text-sm">A+</div><div class="text-gray-400 text-[11px]" data-key="statKlasse">Klasse</div></div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <button onclick="openModal('projectModal3')" class="border border-[#3e2723] text-[#3e2723] py-2.5 rounded-full text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="viewProject">Ansehen</button>
+                                <a href="../contacts/" class="bg-[#3e2723] text-white py-2.5 rounded-full text-sm font-medium hover:bg-[#5d4037] transition text-center" data-key="ctaContact">Beratung erhalten</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-14 md:py-20 bg-[#f5f5f5]">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaProjectsTitle">Möchten Sie ein solches Haus?</h2>
+                <p class="text-gray-600 text-sm mb-6" data-key="ctaProjectsDesc">Wir besprechen Ihr Projekt und finden die optimale Lösung</p>
+                <a href="../contacts/" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg" data-key="ctaContact">Beratung erhalten</a>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <!-- МОДАЛКА 1 -->
+    <div id="projectModal1" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="gallery1">
+                    <img src="../images/project1-facade-evening.jpg" alt="Modernes SIP-Haus — Fassade mit LED-Beleuchtung">
+                    <img src="../images/project1-photo1.jpg" alt="Modernes SIP-Haus — Außenansicht">
+                    <img src="../images/project1-photo2.jpg" alt="Modernes SIP-Haus — Außenansicht">
+                    <img src="../images/project1-living.jpg" alt="Wohnzimmer mit Parkett und bodentiefen Fenstern">
+                    <img src="../images/project1-kitchen.jpg" alt="Küche im Innenausbau">
+                    <img src="../images/project1-closet.jpg" alt="Einbauschrank / Ankleide">
+                    <img src="../images/project1-construction.jpg" alt="Bauphase — Fassade im Gerüst">
+                    <img src="../images/project1-detail.jpg" alt="Fassadendetail">
+                </div>
+                <button onclick="galleryPrev('gallery1', 8)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('gallery1', 8)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('gallery1', 8)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('gallery1', 8)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="dots1">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- МОДАЛКА 2 -->
+    <div id="projectModal2" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="gallery2">
+                    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="Загородный коттедж — фасад">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Загородный коттедж — терраса">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Загородный коттедж — интерьер">
+                </div>
+                <button onclick="galleryPrev('gallery2', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('gallery2', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('gallery2', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('gallery2', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="dots2">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- МОДАЛКА 3 -->
+    <div id="projectModal3" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="gallery3">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Минималистичный дом — фасад">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Минималистичный дом — кухня">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Минималистичный дом — гостиная">
+                </div>
+                <button onclick="galleryPrev('gallery3', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('gallery3', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('gallery3', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('gallery3', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="dots3">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- FOOTER -->
+    <footer class="bg-[#3e2723] text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <img src="../images/logo-header.png" class="h-9" alt="Eco Meister Haus">
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-xs" data-key="footerTagline">Energieeffiziente SIP-Häuser schlüsselfertig — geplant und gebaut aus einer Hand.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerNav">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm text-white/70">
+                        <li><a href="../services/" class="hover:text-amber-400 transition" data-key="services">Dienstleistungen</a></li>
+                        <li><a href="../stages/" class="hover:text-amber-400 transition" data-key="stages">Bauphasen</a></li>
+                        <li><a href="../advantages/" class="hover:text-amber-400 transition" data-key="advantages">Vorteile</a></li>
+                        <li><a href="../about/" class="hover:text-amber-400 transition" data-key="about">Über uns</a></li>
+                        <li><a href="../projects/" class="hover:text-amber-400 transition" data-key="projects">Projekte</a></li>
+                        <li><a href="../contacts/" class="hover:text-amber-400 transition" data-key="contacts">Kontakte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4" data-key="footerContact">Kontakt</h4>
+                    <ul class="space-y-3 text-sm text-white/70">
+                        <li><a href="tel:+4917632291111" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-phone text-amber-400 w-4"></i>+49 176 32291111</a></li>
+                        <li><a href="mailto:info@ecomeisterhaus.de" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-envelope text-amber-400 w-4"></i>info@ecomeisterhaus.de</a></li>
+                        <li><a href="https://wa.me/4917632291111" class="inline-flex items-center gap-2.5 hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp text-amber-400 w-4"></i>WhatsApp: +49 176 32291111</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3b0000] py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/70">
+                © 2026 Eco Meister Haus. <span data-key="footerRights">Alle Rechte vorbehalten.</span> &middot; <a href="../datenschutz/" class="hover:text-amber-400 transition" data-key="footerPrivacy">Datenschutz</a> &middot; <a href="../impressum/" class="hover:text-amber-400 transition">Impressum</a>
+            </div>
+        </div>
+    </footer>
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/4917632291111" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 transition text-2xl">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+4917632291111" aria-label="Anrufen" title="Anrufen" class="w-14 h-14 rounded-full bg-[#3e2723] text-white flex items-center justify-center shadow-lg hover:scale-110 transition text-xl">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+    <!-- CONSULT POPUP -->
+    <div id="consultPopup" class="fixed z-[60] hidden bottom-0 left-0 right-0 md:bottom-6 md:right-6 md:left-auto md:max-w-sm">
+        <div class="bg-white shadow-2xl border border-gray-100 md:rounded-2xl p-5 relative">
+            <button onclick="closeConsult()" aria-label="Schließen" class="absolute top-2 right-2 w-8 h-8 rounded-full hover:bg-gray-100 text-gray-400 flex items-center justify-center text-xl leading-none">&times;</button>
+            <div class="flex items-start gap-3 pr-6">
+                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-comments text-[#3e2723]"></i></div>
+                <div>
+                    <p class="font-semibold text-[#3e2723] text-sm" data-key="popupTitle">Nicht sicher, welches Haus zu Ihnen passt?</p>
+                    <p class="text-gray-500 text-xs mt-1" data-key="popupDesc">Fordern Sie eine kostenlose, unverbindliche Beratung an.</p>
+                    <a href="/contacts/" class="inline-block mt-3 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-[#5d4037] transition" data-key="popupBtn">Kostenlose Beratung</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

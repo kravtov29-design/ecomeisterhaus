@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="../images/logo-header.png">
     <script defer src="../app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Bauphasen — So bauen wir Ihr SIP-Haus | Eco Meister Haus</title>
-    <meta name="description" content="Der Bauablauf Schritt für Schritt: von der Planung über die SIP-Montage bis zur schlüsselfertigen Übergabe. Transparent, mit Festpreis und 5 Jahren Gewährleistung.">
-    <link rel="canonical" href="https://ecomeisterhaus.de/stages/">
+
+    <title>Über uns — Ihr Baupartner in Berlin | Eco Meister Haus</title>
+    <meta name="description" content="Eco Meister Haus baut energieeffiziente SIP-Häuser und individuelle Projekte nach Maß — nach europäischen Standards in Berlin &amp; Brandenburg. Lernen Sie uns kennen.">
+    <link rel="canonical" href="https://ecomeisterhaus.de/about/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Eco Meister Haus">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:title" content="Bauphasen — So bauen wir Ihr SIP-Haus | Eco Meister Haus">
-    <meta property="og:description" content="Der Bauablauf Schritt für Schritt: von der Planung über die SIP-Montage bis zur schlüsselfertigen Übergabe. Transparent, mit Festpreis und 5 Jahren Gewährleistung.">
-    <meta property="og:url" content="https://ecomeisterhaus.de/stages/">
+    <meta property="og:title" content="Über uns — Ihr Baupartner in Berlin | Eco Meister Haus">
+    <meta property="og:description" content="Eco Meister Haus baut energieeffiziente SIP-Häuser und individuelle Projekte nach Maß — nach europäischen Standards in Berlin &amp; Brandenburg. Lernen Sie uns kennen.">
+    <meta property="og:url" content="https://ecomeisterhaus.de/about/">
     <meta property="og:image" content="https://ecomeisterhaus.de/images/project1-facade-evening.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bauphasen — So bauen wir Ihr SIP-Haus | Eco Meister Haus">
-    <meta name="twitter:description" content="Der Bauablauf Schritt für Schritt: von der Planung über die SIP-Montage bis zur schlüsselfertigen Übergabe. Transparent, mit Festpreis und 5 Jahren Gewährleistung.">
+    <meta name="twitter:title" content="Über uns — Ihr Baupartner in Berlin | Eco Meister Haus">
+    <meta name="twitter:description" content="Eco Meister Haus baut energieeffiziente SIP-Häuser und individuelle Projekte nach Maß — nach europäischen Standards in Berlin &amp; Brandenburg. Lernen Sie uns kennen.">
     <meta name="twitter:image" content="https://ecomeisterhaus.de/images/project1-facade-evening.jpg">
 </head>
-<body class="bg-white flex flex-col min-h-screen">
+<body class="bg-white">
 
     <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
@@ -38,9 +40,9 @@
  
                 <!-- Desktop Nav -->
                 <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
-                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Dienstleistungen</a>
+                    <a href="../services/" data-key="services" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Услуги</a>
                     <div class="relative group">
-                        <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200 flex items-center gap-1">Etappen <i class="fa-solid fa-chevron-down text-[10px] opacity-60"></i></a>
+                        <a href="../stages/" data-key="stages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200 flex items-center gap-1">Bauphasen <i class="fa-solid fa-chevron-down text-[10px] opacity-60"></i></a>
                         <div class="absolute left-0 top-full pt-2 hidden group-hover:block min-w-[190px] z-50">
                             <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2">
                                 <a href="../stages/" data-key="navSip" class="block px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors">SIP-Haus</a>
@@ -48,9 +50,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Vorteile</a>
-                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Über uns</a>
-                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Projekte</a>
+                    <a href="../advantages/" data-key="advantages" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Преимущества</a>
+                    <a href="../about/" data-key="about" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">О компании</a>
+                    <a href="../projects/" data-key="projects" class="px-3 py-2 rounded-lg hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">Проекты</a>
                 </nav>
  
                 <!-- Правая часть -->
@@ -76,7 +78,7 @@
                     <!-- CTA кнопка (desktop) -->
                     <a href="../contacts/" data-key="contacts"
                         class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">
-                        Kontakte
+                        Контакты
                     </a>
  
                     <!-- Бургер (mobile) -->
@@ -143,7 +145,7 @@
                         <button onclick="toggleLangMobile()"
                             class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
                             <span>🌐</span>
-                            <span id="currentLangMobile" class="font-medium">DE</span>
+                            <span id="currentLangMobile" class="font-medium">RU</span>
                         </button>
                         <div id="langMenuMobile"
                             class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
@@ -158,186 +160,213 @@
         </div>
     </header>
 
-    <main class="flex-grow py-12 md:py-20">
-        <div class="container mx-auto px-4 max-w-2xl">
- 
-            <div class="text-center mb-12">
-                <h1 class="text-2xl md:text-4xl font-bold text-[#3e2723] mb-4" data-key="stages">
-                    Etappen der Bauausführung
+    <main class="flex-grow">
+
+        <!-- HERO -->
+        <section class="relative h-[300px] md:h-[420px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('../images/hero-main.webp')"
+                role="img" aria-label="Современный дом Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/70"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="aboutHeroTitle">
+                    Über uns
                 </h1>
-                <p class="text-gray-600" data-key="stagesDesc">
-                    Der vollständige Bauprozess vom Konzept bis zur Einzug
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="aboutHeroDesc">
+                    Wir bauen moderne, zuverlässige und energieeffiziente Häuser nach europäischen Standards
                 </p>
             </div>
+        </section>
  
-            <div class="max-w-2xl mx-auto mb-10 text-center">
-                <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="sIntro">Der Bau eines SIP-Hauses folgt einem klaren, planbaren Ablauf. Von der ersten Beratung bis zur Schlüsselübergabe begleiten wir jeden Schritt — transparent, mit Festpreis und 5 Jahren Gewährleistung.</p>
-            </div>
- 
-            <ol class="relative border-s-2 border-amber-200 ms-6">
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-person-digging" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">01</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage1">Grundstücksvorbereitung & Fundament</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage1Desc">Wir bereiten das Grundstück vor, führen Erdarbeiten durch und erstellen ein tragfähiges Fundament als Basis für Ihr Haus.</p>
+        <!-- ОСНОВНОЙ БЛОК О КОМПАНИИ -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-6" data-key="aboutCompanyTitle">
+                            Wer wir sind
+                        </h2>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4" data-key="aboutCompanyText1">
+                            Eco Meister Haus — das ist ein Team von Fachleuten in der Branche der energetisch effizienten Hauskonstruktion. Wir arbeiten nach der SIP-Technologie und setzen moderne europäische Standards auf jedem Stadium — von der Planung bis zur Übergabe der Schlüssel.
+                        </p>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="aboutCompanyText2">
+                            Unser Ziel — moderne Häuser zu bauen, in denen es komfortabel zu leben und wirtschaftlich zu unterhalten ist. Warm in der kalten Jahreszeit, kühl im Sommer, langlebig und schön.
+                        </p>
                     </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">02</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage2">Planung & Ingenieurwesen</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage2Desc">Architektur, statische Berechnungen und Energiekonzept — abgestimmt auf KfW-Anforderungen und Ihre Wünsche.</p>
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="../images/project1-photo2.jpg" loading="lazy"
+                            class="w-full h-64 md:h-80 object-cover"
+                            alt="Kommando Eco Meister Haus bei der Arbeit an einem Hausprojekt">
                     </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-industry" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">03</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage3">SIP-Paneele Produktion</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage3Desc">Die maßgefertigten SIP-Paneele werden präzise in der Produktion gefertigt — für maximale Energieeffizienz.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">04</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage4">Lieferung & Montage</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage4Desc">Anlieferung der Elemente und schneller Aufbau der Gebäudehülle — der Rohbau steht meist in nur 2–4 Wochen.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">05</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage5">Dach & Außenarbeiten</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage5Desc">Dacheindeckung, Fenster und Fassade machen das Haus wetterfest und verleihen ihm sein Gesicht.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">06</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage6">Technische Systeme</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage6Desc">Installation von Elektrik, Heizung, Sanitär und Lüftung — alle Leitungen werden fachgerecht verlegt.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-paint-roller" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">07</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage7">Innenausbau</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage7Desc">Wände, Böden, Türen und die komplette Ausstattung bis zum schlüsselfertigen Innenausbau.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">08</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage8">Prüfung & Inspektion</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage8Desc">Abnahme aller Systeme und Qualitätskontrolle, damit alles einwandfrei funktioniert.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-key" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">09</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage9">Übergabe & Einzug</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage9Desc">Schlüsselübergabe inklusive aller Dokumente — Ihr neues Zuhause ist bezugsfertig.</p>
-                    </div>
-                </li>
-            </ol>
- 
-            <div class="mt-16">
-                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-6 text-center" data-key="sfTitle">Häufige Fragen zum Bauablauf</h2>
-                <div class="space-y-3">
-                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                        <span data-key="sfQ1">Wie lange dauert der Bau eines SIP-Hauses?</span>
-                        <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
-                    </button>
-                    <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="sfA1">Von der Planung bis zur Schlüsselübergabe dauert es in der Regel 3–6 Monate. Die SIP-Gebäudehülle selbst steht oft schon in 2–4 Wochen.</div>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                        <span data-key="sfQ2">Kümmern Sie sich um die Baugenehmigung?</span>
-                        <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
-                    </button>
-                    <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="sfA2">Ja. Wir begleiten Sie durch den gesamten Genehmigungsprozess und arbeiten mit einem DENA-Energieberater zusammen, der für KfW-Förderungen erforderlich ist.</div>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                        <span data-key="sfQ3">Ist wirklich alles aus einer Hand?</span>
-                        <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
-                    </button>
-                    <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="sfA3">Ja — von der Planung über die Produktion der SIP-Paneele bis zum schlüsselfertigen Innenausbau übernehmen wir jeden Schritt. Sie haben einen Ansprechpartner für das gesamte Projekt.</div>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                        <span data-key="sfQ4">Welche Garantie erhalte ich?</span>
-                        <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
-                    </button>
-                    <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="sfA4">Sie erhalten eine Festpreisgarantie sowie 5 Jahre Gewährleistung auf unsere Bauleistung.</div>
-                </div>
                 </div>
             </div>
+        </section>
  
-            <!-- CTA -->
-            <div class="mt-16 text-center bg-[#f5f5f5] rounded-2xl p-8 md:p-12">
-                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaStagesTitle">
-                    Bereit, um mit dem Bau zu beginnen?
+        <!-- КАЧЕСТВО / ЭКОЛОГИЧНОСТЬ / ЕВРОСТАНДАРТЫ -->
+        <section class="py-16 md:py-20 bg-[#f5f5f5]">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="aboutValuesTitle">
+                        Unsere Werte
+                    </h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto" data-key="aboutValuesDesc">
+                        Qualität, Umweltfreundlichkeit und europäische Standards — in jedem Projekt
+                    </p>
+                </div>
+ 
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf text-green-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val1Title">Ökologisch</h3>
+                        <p class="text-gray-500 text-sm" data-key="val1Desc">
+                            Wir verwenden nur sichere, zertifizierte Materialien ohne schädliche Emissionen
+                        </p>
+                    </div>
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-award text-amber-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val2Title">Qualität</h3>
+                        <p class="text-gray-500 text-sm" data-key="val2Desc">
+                            Jeder Stage durchläuft eine Qualitätskontrolle. Wir übergeben das Objekt nicht, bis wir uns in seiner Zuverlässigkeit sicher sind
+                        </p>
+                    </div>
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-eu text-blue-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val3Title">Europäische Standards</h3>
+                        <p class="text-gray-500 text-sm" data-key="val3Desc">
+                            Wir bauen gemäß den europäischen Normen zur Energieeffizienz und Baureglementierungen
+                        </p>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- K Wie wir arbeiten -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="aboutApproachTitle">
+                        Unser Ansatz
+                    </h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto" data-key="aboutApproachDesc">
+                        So arbeiten wir mit jedem Kunden
+                    </p>
+                </div>
+ 
+                <div class="grid md:grid-cols-2 gap-6">
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">1</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach1Title">Hören und verstehen</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach1Desc">Wir beginnen mit einem detaillierten Gespräch über Ihre Wünsche, Ihr Budget und Ihre Termine. Keine Standardlösungen.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">2</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach2Title">Planen für Sie</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach2Desc">Wir entwickeln individuelle Projekte unter Berücksichtigung Ihres Grundstücks, des Klimas und Ihres Lebensstils.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">3</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach3Title">Wir bauen transparent</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach3Desc">Sie sind über jeden Schritt informiert. Regelmäßige Berichte, Fotos vom Objekt, feste Kostenvoransagen ohne verborgene Zusatzkosten.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">4</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach4Title">Wir liefern schlüsselfertig</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach4Desc">Wir übergeben Ihnen den fertigen Haus mit dem vollständigen Dokumentationspaket und einer Garantie auf die ausgeführten Arbeiten.</p>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ТЕХНОЛОГИИ И МАТЕРИАЛЫ -->
+        <section class="py-16 md:py-20 bg-[#3e2723] text-white">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="../images/project1-construction.jpg" loading="lazy"
+                            class="w-full h-64 md:h-80 object-cover"
+                            alt="SIP панели — современная технология строительства энергоэффективных домов">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-6" data-key="aboutTechTitle">
+                            Technologien und Materialien
+                        </h2>
+                        <p class="text-white/80 text-sm md:text-base leading-relaxed mb-4" data-key="aboutTechText1">
+                            In der Basis unserer Häuser — die SIP-Technologie (Structural Insulated Panels). Das sind Sandwich-Panele aus OSB und Polystyrol, die eine hohe Wärmedämmung, Festigkeit und Baugeschwindigkeit gewährleisten.
+                        </p>
+                        <p class="text-white/80 text-sm md:text-base leading-relaxed mb-6" data-key="aboutTechText2">
+                            Ein Haus auf SIP wird mehrere Male schneller als ein Ziegelhaus errichtet, wobei es in Bezug auf Energieeffizienz übertrifft. Die Heizkosten sinken um bis zu 60%.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">−60%</div>
+                                <div class="text-white/70 text-xs" data-key="techStat1">Heizkosteneinsparung</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">3×</div>
+                                <div class="text-white/70 text-xs" data-key="techStat2">schneller als ein Ziegelhaus</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">50+</div>
+                                <div class="text-white/70 text-xs" data-key="techStat3">Jahre Haltbarkeit</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">A+</div>
+                                <div class="text-white/70 text-xs" data-key="techStat4">Energieeffizienzklasse</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-16 md:py-20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="aboutCtaTitle">
+                    Bereit, Ihr Traumhaus zu bauen?
                 </h2>
-                <p class="text-gray-600 text-sm mb-6" data-key="ctaStagesDesc">
-                    Kontaktieren Sie uns — wir besprechen Ihr Projekt und berechnen die Kosten
+                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="aboutCtaDesc">
+                    Erzählen Sie uns von Ihrem Projekt — wir finden die optimale Lösung und berechnen die Kosten
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="../contacts/" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition" data-key="ctaContact">
-                        Kontakt aufnehmen
+                    <a href="../contacts/"
+                        class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
+                        data-key="ctaContact">
+                        Consultation erhalten
                     </a>
-                    <a href="../projects/" class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition" data-key="ctaProjects">
+                    <a href="../projects/"
+                        class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition"
+                        data-key="ctaProjects">
                         Projekte ansehen
                     </a>
                 </div>
             </div>
- 
-        </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
