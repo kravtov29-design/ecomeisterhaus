@@ -199,7 +199,7 @@ const translations = {
         project3Full: "Современный минимализм с функциональной планировкой.",
         viewProject: "Смотреть",
         heroTitle1: "Строим быстрее, проще и эффективнее",
-        heroTitle2: "Современные SIP технологии",
+        heroTitle2: "Современный энергоэффективный дом",
         heroTitle3: "Надежные и энергоэффективные дома",
         whyTitle: "Почему Eco Meister Haus", whyDesc: "Четыре причины, по которым нам доверяют строительство своего дома",
         why1Title: "Быстро", why1Desc: "Дом под ключ за 3–6 месяцев благодаря SIP-технологии",
@@ -496,7 +496,7 @@ const translations = {
         project3Full: "Modern minimalism with functional layout.",
         viewProject: "View",
         heroTitle1: "Build faster, easier and more efficiently",
-        heroTitle2: "Modern SIP technologies",
+        heroTitle2: "A modern, efficient home",
         heroTitle3: "Reliable and energy-efficient homes",
         whyTitle: "Why Eco Meister Haus", whyDesc: "Four reasons people trust us to build their home",
         why1Title: "Fast", why1Desc: "Turnkey home in 3–6 months",
@@ -767,7 +767,7 @@ const translations = {
         project3Full: "Minimalism modern cu planificare funcțională.",
         viewProject: "Vezi",
         heroTitle1: "Construim mai rapid, mai ușor și mai eficient",
-        heroTitle2: "Tehnologii SIP moderne",
+        heroTitle2: "O casă modernă și eficientă",
         heroTitle3: "Case fiabile și eficiente energetic",
         whyTitle: "De ce Eco Meister Haus", whyDesc: "Patru motive pentru care ne încredințează construcția",
         why1Title: "Rapid", why1Desc: "Casă la cheie în 3–6 luni",
@@ -1064,7 +1064,7 @@ const translations = {
         project3Full: "Moderner Minimalismus mit funktionalem Grundriss.",
         viewProject: "Ansehen",
         heroTitle1: "Schneller, einfacher und effizienter bauen",
-        heroTitle2: "Moderne SIP-Technologien",
+        heroTitle2: "Modernes, effizientes Haus",
         heroTitle3: "Zuverlässige und energieeffiziente Häuser",
         whyTitle: "Warum Eco Meister Haus", whyDesc: "Vier Gründe, warum uns Menschen den Bau anvertrauen",
         why1Title: "Schnell", why1Desc: "Schlüsselfertiges Haus in 3–6 Monaten",
@@ -1336,3 +1336,13 @@ function updateGallery(id, total) {
 // ===== Consult popup =====
 function closeConsult(){var p=document.getElementById('consultPopup');if(p)p.classList.add('hidden');try{sessionStorage.setItem('consultDismissed','1');}catch(e){}}
 document.addEventListener('DOMContentLoaded',function(){try{if(sessionStorage.getItem('consultDismissed'))return;}catch(e){}setTimeout(function(){var p=document.getElementById('consultPopup');if(p)p.classList.remove('hidden');},30000);});
+
+// ===== Hero rotate (подстраницы) =====
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.hero-rotate').forEach(function(box){
+    var sl=box.querySelectorAll('.hero-slide'); if(sl.length<2) return;
+    var st=parseInt(box.getAttribute('data-start')||'0',10)%sl.length, i=st;
+    sl.forEach(function(s,idx){ s.style.opacity = idx===st ? '1':'0'; });
+    setInterval(function(){ sl[i].style.opacity='0'; i=(i+1)%sl.length; sl[i].style.opacity='1'; },5000);
+  });
+});
