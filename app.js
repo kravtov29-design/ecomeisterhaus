@@ -1,6 +1,7 @@
 const translations = {
  
     ru: {
+        sIntro: "Строительство SIP-дома идёт по чёткому, предсказуемому плану. От первой консультации до передачи ключей мы сопровождаем каждый шаг — прозрачно, с фиксированной ценой и 5 годами гарантии.",
         popupTitle: "Не знаете, какой дом выбрать?",
         popupDesc: "Запросите бесплатную консультацию без обязательств.",
         popupBtn: "Бесплатная консультация",
@@ -41,7 +42,6 @@ const translations = {
         dur1: "4 месяца",
         dur2: "5 месяцев",
         dur3: "3 месяца",
-        sIntro: "Строительство SIP-дома проходит по чёткому, предсказуемому плану. От первой консультации до передачи ключей мы сопровождаем каждый шаг — прозрачно, по фиксированной цене и с 5-летней гарантией.",
         sfTitle: "Частые вопросы о строительстве",
         sfQ1: "Сколько длится строительство SIP-дома?",
         sfA1: "От проектирования до передачи ключей обычно проходит 3–6 месяцев. Сама коробка SIP-дома часто готова уже за 2–4 недели.",
@@ -141,7 +141,6 @@ const translations = {
         subject: "Тема", message: "Ваше сообщение", send: "Отправить",
         servicesTitle: "Наши услуги", servicesDesc: "Мы предоставляем комплексные услуги в сфере строительства.",
         servicesHeroDesc: "Комплексные решения — от проекта до готового дома под ключ",
-        servicesIntro: "Eco Meister Haus предоставляет полный спектр услуг. Мы работаем по технологии SIP и берём на себя весь процесс.",
         service1: "Проектирование", service1Short: "Индивидуальный архитектурный проект под ваш участок и бюджет",
         service2: "Инжиниринг", service2Short: "Электрика, отопление, вентиляция и водоснабжение",
         service3: "Строительство", service3Short: "Возводим дом от фундамента до ключей — быстро, надёжно, по фиксированной цене",
@@ -299,6 +298,7 @@ const translations = {
     },
  
     en: {
+        sIntro: "Building a SIP house follows a clear, predictable process. From the first consultation to handover, we guide every step — transparent, with a fixed price and a 5-year warranty.",
         popupTitle: "Not sure which house suits you?",
         popupDesc: "Request a free, no-obligation consultation.",
         popupBtn: "Free consultation",
@@ -339,7 +339,6 @@ const translations = {
         dur1: "4 months",
         dur2: "5 months",
         dur3: "3 months",
-        sIntro: "Building a SIP house follows a clear, predictable process. From the first consultation to handover, we support every step — transparently, with a fixed price and a 5-year warranty.",
         sfTitle: "Frequently asked questions about the build",
         sfQ1: "How long does building a SIP house take?",
         sfA1: "From planning to handover it usually takes 3–6 months. The SIP shell itself often stands in just 2–4 weeks.",
@@ -439,7 +438,6 @@ const translations = {
         subject: "Subject", message: "Your message", send: "Send",
         servicesTitle: "Our Services", servicesDesc: "We provide comprehensive construction services.",
         servicesHeroDesc: "Comprehensive solutions — from design to turnkey home",
-        servicesIntro: "Eco Meister Haus provides a full range of energy-efficient home construction services.",
         service1: "Design", service1Short: "Individual architectural project for your plot and budget",
         service2: "Engineering", service2Short: "Electrical, heating, ventilation and water supply",
         service3: "Construction", service3Short: "We build from foundation to keys — fast, reliable, fixed price",
@@ -597,6 +595,7 @@ const translations = {
     },
  
     ro: {
+        sIntro: "Construcția unei case SIP urmează un proces clar și previzibil. De la prima consultație până la predarea cheilor, vă însoțim la fiecare pas — transparent, cu preț fix și 5 ani garanție.",
         popupTitle: "Nu știți ce casă vi se potrivește?",
         popupDesc: "Solicitați o consultație gratuită, fără obligații.",
         popupBtn: "Consultație gratuită",
@@ -637,7 +636,6 @@ const translations = {
         dur1: "4 luni",
         dur2: "5 luni",
         dur3: "3 luni",
-        sIntro: "Construcția unei case SIP urmează un proces clar și previzibil. De la prima consultație până la predarea cheilor, vă însoțim la fiecare pas — transparent, cu preț fix și garanție de 5 ani.",
         sfTitle: "Întrebări frecvente despre construcție",
         sfQ1: "Cât durează construcția unei case SIP?",
         sfA1: "De la proiectare până la predarea cheilor durează de regulă 3–6 luni. Structura SIP în sine este gata adesea în 2–4 săptămâni.",
@@ -869,6 +867,7 @@ const translations = {
     },
  
     de: {
+        sIntro: "Der Bau eines SIP-Hauses folgt einem klaren, planbaren Ablauf. Von der ersten Beratung bis zur Schlüsselübergabe begleiten wir jeden Schritt — transparent, mit Festpreis und 5 Jahren Gewährleistung.",
         popupTitle: "Nicht sicher, welches Haus zu Ihnen passt?",
         popupDesc: "Fordern Sie eine kostenlose, unverbindliche Beratung an.",
         popupBtn: "Kostenlose Beratung",
@@ -909,7 +908,6 @@ const translations = {
         dur1: "4 Monate",
         dur2: "5 Monate",
         dur3: "3 Monate",
-        sIntro: "Der Bau eines SIP-Hauses folgt einem klaren, planbaren Ablauf. Von der ersten Beratung bis zur Schlüsselübergabe begleiten wir jeden Schritt — transparent, mit Festpreis und 5 Jahren Gewährleistung.",
         sfTitle: "Häufige Fragen zum Bauablauf",
         sfQ1: "Wie lange dauert der Bau eines SIP-Hauses?",
         sfA1: "Von der Planung bis zur Schlüsselübergabe dauert es in der Regel 3–6 Monate. Die SIP-Gebäudehülle selbst steht oft schon in 2–4 Wochen.",
@@ -1009,7 +1007,6 @@ const translations = {
         subject: "Betreff", message: "Ihre Nachricht", send: "Senden",
         servicesTitle: "Unsere Dienstleistungen", servicesDesc: "Wir bieten umfassende Bauleistungen an.",
         servicesHeroDesc: "Umfassende Lösungen — vom Projekt bis zum schlüsselfertigen Haus",
-        servicesIntro: "Eco Meister Haus bietet ein vollständiges Spektrum an energieeffizienten Hausbaudienstleistungen.",
         service1: "Planung", service1Short: "Individuelles Architekturprojekt für Ihr Grundstück und Budget",
         service2: "Ingenieurwesen", service2Short: "Elektrik, Heizung, Lüftung und Wasserversorgung",
         service3: "Bau", service3Short: "Wir bauen vom Fundament bis zu den Schlüsseln — schnell, zuverlässig, Festpreis",
