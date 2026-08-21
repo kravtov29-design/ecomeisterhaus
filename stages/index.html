@@ -21,6 +21,11 @@
     <meta name="twitter:title" content="Bauphasen — So bauen wir Ihr SIP-Haus | Eco Meister Haus">
     <meta name="twitter:description" content="Der Bauablauf Schritt für Schritt: von der Planung über die SIP-Montage bis zur schlüsselfertigen Übergabe. Transparent, mit Festpreis und 5 Jahren Gewährleistung.">
     <meta name="twitter:image" content="https://ecomeisterhaus.de/images/project1-facade-evening.jpg">
+    <style>
+        .gallery-wrap { overflow: hidden; position: relative; }
+        .gallery-track { display: flex; height: 100%; transition: transform 0.4s ease; }
+        .gallery-track img { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; object-fit: contain; }
+    </style>
 </head>
 <body class="bg-white flex flex-col min-h-screen">
 
@@ -179,112 +184,234 @@
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-person-digging" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">01</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage1">Grundstücksvorbereitung & Fundament</h2>
+                    <div onclick="openModal('stageModal1')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">01</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage1">Fundamentvorbereitung</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage1Desc">Wir bereiten das Grundstück vor, führen Erdarbeiten durch und erstellen ein tragfähiges Fundament als Basis für Ihr Haus.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">02</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage2">Planung & Ingenieurwesen</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage2Desc">Architektur, statische Berechnungen und Energiekonzept — abgestimmt auf KfW-Anforderungen und Ihre Wünsche.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-industry" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">03</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage3">SIP-Paneele Produktion</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage3Desc">Die maßgefertigten SIP-Paneele werden präzise in der Produktion gefertigt — für maximale Energieeffizienz.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage1Desc">Wir bereiten das Grundstück und die Basis vor — Vermessung, Erdarbeiten und Schalung für das Fundament.</p>
                     </div>
                 </li>
                 <li class="mb-8 ms-10 last:mb-0">
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">04</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage4">Lieferung & Montage</h2>
+                    <div onclick="openModal('stageModal2')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">02</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage2">Betonieren</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage4Desc">Anlieferung der Elemente und schneller Aufbau der Gebäudehülle — der Rohbau steht meist in nur 2–4 Wochen.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage2Desc">Wir gießen das Betonfundament — die tragfähige Basis für das gesamte Haus.</p>
+                    </div>
+                </li>
+                <li class="mb-8 ms-10 last:mb-0">
+                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
+                        <i class="fa-solid fa-hard-hat" aria-hidden="true"></i>
+                    </span>
+                    <div onclick="openModal('stageModal3')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">03</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage3">Hausmontage</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage3Desc">Wir errichten die Konstruktion und die Wände des Hauses nach Plan.</p>
                     </div>
                 </li>
                 <li class="mb-8 ms-10 last:mb-0">
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">05</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage5">Dach & Außenarbeiten</h2>
+                    <div onclick="openModal('stageModal4')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">04</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage4">Dachmontage</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage5Desc">Dacheindeckung, Fenster und Fassade machen das Haus wetterfest und verleihen ihm sein Gesicht.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage4Desc">Wir montieren den Dachstuhl und die Dacheindeckung.</p>
+                    </div>
+                </li>
+                <li class="mb-8 ms-10 last:mb-0">
+                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
+                        <i class="fa-solid fa-water" aria-hidden="true"></i>
+                    </span>
+                    <div onclick="openModal('stageModal5')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">05</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage5">Abdichtung, Fenster & Türen</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage5Desc">Wir dichten das Fundament ab, verfugen die Nähte und setzen Fenster und Türen ein.</p>
+                    </div>
+                </li>
+                <li class="mb-8 ms-10 last:mb-0">
+                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                    </span>
+                    <div onclick="openModal('stageModal6')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">06</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage6">Geschossdecke</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage6Desc">Wir montieren die Decke zwischen den Geschossen.</p>
                     </div>
                 </li>
                 <li class="mb-8 ms-10 last:mb-0">
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-bolt" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">06</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage6">Technische Systeme</h2>
+                    <div onclick="openModal('stageModal7')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">07</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage7">Elektrik, Sanitär & Trockenbau</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage6Desc">Installation von Elektrik, Heizung, Sanitär und Lüftung — alle Leitungen werden fachgerecht verlegt.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage7Desc">Wir verlegen Elektro- und Sanitärleitungen und führen den Trockenbau aus.</p>
                     </div>
                 </li>
                 <li class="mb-8 ms-10 last:mb-0">
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-paint-roller" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">07</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage7">Innenausbau</h2>
+                    <div onclick="openModal('stageModal8')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">08</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage8">Fassade, Pflaster & Wärmepumpe</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage7Desc">Wände, Böden, Türen und die komplette Ausstattung bis zum schlüsselfertigen Innenausbau.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage8Desc">Wir gestalten die Fassade, verlegen die Pflastersteine und installieren die Wärmepumpe.</p>
+                    </div>
+                </li>
+                <li class="mb-8 ms-10 last:mb-0">
+                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
+                        <i class="fa-solid fa-couch" aria-hidden="true"></i>
+                    </span>
+                    <div onclick="openModal('stageModal9')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">09</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage9">Fliesen, Laminat & Möbel</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage9Desc">Wir verlegen Fliesen und Laminat und stellen die Möbel auf.</p>
                     </div>
                 </li>
                 <li class="mb-8 ms-10 last:mb-0">
                     <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
                         <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
                     </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">08</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage8">Prüfung & Inspektion</h2>
+                    <div onclick="openModal('stageModal10')" class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition cursor-pointer">
+                        <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-amber-500 font-bold text-sm">10</span>
+                                <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage10">Endabnahme & Übergabe</h2>
+                            </div>
+                            <i class="fa-solid fa-images text-gray-300 text-sm" aria-hidden="true"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage8Desc">Abnahme aller Systeme und Qualitätskontrolle, damit alles einwandfrei funktioniert.</p>
-                    </div>
-                </li>
-                <li class="mb-8 ms-10 last:mb-0">
-                    <span class="absolute flex items-center justify-center w-10 h-10 bg-[#3e2723] rounded-full -start-5 ring-4 ring-white text-amber-400">
-                        <i class="fa-solid fa-key" aria-hidden="true"></i>
-                    </span>
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
-                        <div class="flex items-baseline gap-2 mb-1.5">
-                            <span class="text-amber-500 font-bold text-sm">09</span>
-                            <h2 class="text-base md:text-lg font-semibold text-[#3e2723]" data-key="stage9">Übergabe & Einzug</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage9Desc">Schlüsselübergabe inklusive aller Dokumente — Ihr neues Zuhause ist bezugsfertig.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed" data-key="stage10Desc">Abschließende Prüfung aller Systeme und Übergabe des Hauses an den Auftraggeber.</p>
                     </div>
                 </li>
             </ol>
- 
+
+    <div id="stageModal1" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal1')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage1">Fundamentvorbereitung</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal2" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal2')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage2">Betonieren</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal3" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal3')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage3">Hausmontage</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal4" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal4')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage4">Dachmontage</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal5" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal5')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage5">Abdichtung, Fenster & Türen</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal6" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal6')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage6">Geschossdecke</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal7" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal7')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage7">Elektrik, Sanitär & Trockenbau</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal8" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal8')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage8">Fassade, Pflaster & Wärmepumpe</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal9" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal9')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage9">Fliesen, Laminat & Möbel</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
+    <div id="stageModal10" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
+            <button onclick="closeModal('stageModal10')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
+            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage10">Endabnahme & Übergabe</h3>
+            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        </div>
+    </div>
+
             <div class="mt-16">
                 <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-6 text-center" data-key="sfTitle">Häufige Fragen zum Bauablauf</h2>
                 <div class="space-y-3">
