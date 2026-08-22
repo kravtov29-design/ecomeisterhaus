@@ -333,74 +333,208 @@
             </ol>
 
     <div id="stageModal1" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal1')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage1">Fundamentvorbereitung</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery1">
+                    <img src="../images/stage1-1.webp" alt="Fundamentvorbereitung — Foto 1" loading="lazy">
+                    <img src="../images/stage1-2.webp" alt="Fundamentvorbereitung — Foto 2" loading="lazy">
+                    <img src="../images/stage1-3.webp" alt="Fundamentvorbereitung — Foto 3" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery1', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery1', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery1', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery1', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots1">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal1')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal2" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal2')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage2">Betonieren</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery2">
+                    <img src="../images/stage2-1.webp" alt="Betonieren — Foto 1" loading="lazy">
+                    <img src="../images/stage2-2.webp" alt="Betonieren — Foto 2" loading="lazy">
+                    <img src="../images/stage2-3.webp" alt="Betonieren — Foto 3" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery2', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery2', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery2', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery2', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots2">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal2')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal3" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal3')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage3">Hausmontage</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery3">
+                    <img src="../images/stage3-1.webp" alt="Hausmontage — Foto 1" loading="lazy">
+                    <img src="../images/stage3-2.webp" alt="Hausmontage — Foto 2" loading="lazy">
+                    <img src="../images/stage3-3.webp" alt="Hausmontage — Foto 3" loading="lazy">
+                    <img src="../images/stage3-4.webp" alt="Hausmontage — Foto 4" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery3', 4)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery3', 4)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery3', 4)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery3', 4)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots3">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal3')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal4" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal4')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage4">Dachmontage</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery4">
+                    <img src="../images/stage4-1.webp" alt="Dachmontage — Foto 1" loading="lazy">
+                    <img src="../images/stage4-2.webp" alt="Dachmontage — Foto 2" loading="lazy">
+                    <img src="../images/stage4-3.webp" alt="Dachmontage — Foto 3" loading="lazy">
+                    <img src="../images/stage4-4.webp" alt="Dachmontage — Foto 4" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery4', 4)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery4', 4)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery4', 4)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery4', 4)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots4">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal4')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal5" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal5')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage5">Abdichtung, Fenster & Türen</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery5">
+                    <img src="../images/stage5-1.webp" alt="Abdichtung, Fenster & Türen — Foto 1" loading="lazy">
+                    <img src="../images/stage5-2.webp" alt="Abdichtung, Fenster & Türen — Foto 2" loading="lazy">
+                    <img src="../images/stage5-3.webp" alt="Abdichtung, Fenster & Türen — Foto 3" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery5', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery5', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery5', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery5', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots5">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal5')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal6" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal6')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage6">Geschossdecke</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery6">
+                    <img src="../images/stage6-1.webp" alt="Geschossdecke — Foto 1" loading="lazy">
+                    <img src="../images/stage6-2.webp" alt="Geschossdecke — Foto 2" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery6', 2)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery6', 2)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery6', 2)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery6', 2)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots6">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal6')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal7" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal7')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage7">Elektrik, Sanitär & Trockenbau</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery7">
+                    <img src="../images/stage7-1.webp" alt="Elektrik, Sanitär & Trockenbau — Foto 1" loading="lazy">
+                    <img src="../images/stage7-2.webp" alt="Elektrik, Sanitär & Trockenbau — Foto 2" loading="lazy">
+                    <img src="../images/stage7-3.webp" alt="Elektrik, Sanitär & Trockenbau — Foto 3" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery7', 3)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery7', 3)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery7', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery7', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots7">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal7')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal8" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal8')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage8">Fassade, Pflaster & Wärmepumpe</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery8">
+                    <img src="../images/stage8-1.webp" alt="Fassade, Pflaster & Wärmepumpe — Foto 1" loading="lazy">
+                    <img src="../images/stage8-2.webp" alt="Fassade, Pflaster & Wärmepumpe — Foto 2" loading="lazy">
+                    <img src="../images/stage8-3.webp" alt="Fassade, Pflaster & Wärmepumpe — Foto 3" loading="lazy">
+                    <img src="../images/stage8-4.webp" alt="Fassade, Pflaster & Wärmepumpe — Foto 4" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery8', 4)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery8', 4)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery8', 4)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery8', 4)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots8">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal8')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
     <div id="stageModal9" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="w-full max-w-2xl relative bg-white rounded-2xl p-8 text-center">
-            <button onclick="closeModal('stageModal9')" class="absolute top-3 right-3 bg-black/10 hover:bg-black/20 text-[#3e2723] w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Schließen">✕</button>
-            <h3 class="text-lg md:text-xl font-bold text-[#3e2723] mb-2" data-key="stage9">Fliesen, Laminat & Möbel</h3>
-            <p class="text-gray-400 text-sm" data-key="stagePhotosSoon">Fotos folgen in Kürze</p>
+        <div class="w-full max-w-5xl relative">
+            <div class="gallery-wrap rounded-2xl h-[70vh] sm:h-[80vh]">
+                <div class="gallery-track" id="stageGallery9">
+                    <img src="../images/stage9-1.webp" alt="Fliesen, Laminat & Möbel — Foto 1" loading="lazy">
+                    <img src="../images/stage9-2.webp" alt="Fliesen, Laminat & Möbel — Foto 2" loading="lazy">
+                    <img src="../images/stage9-3.webp" alt="Fliesen, Laminat & Möbel — Foto 3" loading="lazy">
+                    <img src="../images/stage9-4.webp" alt="Fliesen, Laminat & Möbel — Foto 4" loading="lazy">
+                    <img src="../images/stage9-5.webp" alt="Fliesen, Laminat & Möbel — Foto 5" loading="lazy">
+                </div>
+                <button onclick="galleryPrev('stageGallery9', 5)" aria-label="Zurück" class="absolute left-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryNext('stageGallery9', 5)" aria-label="Weiter" class="absolute right-0 top-0 h-full w-1/2 z-[5] cursor-pointer"></button>
+                <button onclick="galleryPrev('stageGallery9', 5)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Назад"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="galleryNext('stageGallery9', 5)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/75 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition z-10 shadow-lg text-lg" aria-label="Вперёд"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="stageDots9">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('stageModal9')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm z-10" aria-label="Закрыть">✕</button>
+            </div>
         </div>
     </div>
 
