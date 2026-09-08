@@ -1368,8 +1368,6 @@ function updateGallery(id, total) {
 }
 
 // ===== Consult popup =====
-function closeConsult(){var p=document.getElementById('consultPopup');if(p)p.classList.add('hidden');try{sessionStorage.setItem('consultDismissed','1');}catch(e){}}
-document.addEventListener('DOMContentLoaded',function(){try{if(sessionStorage.getItem('consultDismissed'))return;}catch(e){}setTimeout(function(){var p=document.getElementById('consultPopup');if(p)p.classList.remove('hidden');},30000);});
 
 // ===== Hero rotate (подстраницы) =====
 document.addEventListener('DOMContentLoaded',function(){
