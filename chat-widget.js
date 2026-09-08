@@ -1,7 +1,7 @@
 // AI чат-консультант Eco Meister Haus.
 // Работает через Cloudflare Worker (см. worker.js), который прячет API-ключ.
 // ЗАМЕНИТЕ значение ниже на реальный URL вашего задеплоенного Worker.
-const CHAT_WORKER_URL = "https://REPLACE-ME.workers.dev";
+const CHAT_WORKER_URL = "https://damp-poetry-d602.kravtov29.workers.dev";
 
 let chatHistory = [];
 let chatOpened = false;
