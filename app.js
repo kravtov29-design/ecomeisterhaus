@@ -297,6 +297,12 @@ const translations = {
         srvFaq6Q: "Можно ли заказать отдельные виды работ?",
         srvFaq6A: "Да, мы можем взять отдельные виды работ — например только монтаж SIP, только кровлю или только фасад. Но полный пакет экономически выгоднее.",
         srvCtaLang: "Мы говорим на немецком, английском, русском и румынском языках",
+        chatTitle: "Онлайн-консультант",
+        chatSubtitle: "Спросите про SIP-дома и строительство",
+        chatGreeting: "Здравствуйте! Я консультант Eco Meister Haus. Отвечу на вопросы о SIP-домах, индивидуальном строительстве, сроках и ценах. Чем могу помочь?",
+        chatPlaceholder: "Напишите сообщение…",
+        chatError: "Не удалось получить ответ. Попробуйте ещё раз или напишите нам в WhatsApp.",
+        chatDisclaimer: "Ответы даёт ИИ-консультант. Для точного расчёта свяжитесь с нами напрямую.",
     },
  
     en: {
@@ -596,6 +602,12 @@ const translations = {
         srvFaq6Q: "Can I order individual trades only?",
         srvFaq6A: "Yes, we can take on individual services — e.g. SIP assembly only, roofing only or facade only. However, the full package is economically most advantageous.",
         srvCtaLang: "We speak German, English, Russian & Romanian.",
+        chatTitle: "Online consultant",
+        chatSubtitle: "Ask about SIP houses and construction",
+        chatGreeting: "Hello! I'm the Eco Meister Haus consultant. Ask me about SIP houses, custom construction, timelines and pricing. How can I help?",
+        chatPlaceholder: "Type a message…",
+        chatError: "Couldn't get a response. Please try again or message us on WhatsApp.",
+        chatDisclaimer: "Answers are provided by an AI consultant. For an exact quote, please contact us directly.",
     },
  
     ro: {
@@ -870,7 +882,13 @@ const translations = {
         srvFaq5A: "Casele SIP ating în mod regulat clasa A+. Costurile de încălzire sunt cu până la 60% mai mici decât în construcțiile convenționale. Combinate cu o pompă de căldură, clădirea se apropie de standardul casei pasive.",
         srvFaq6Q: "Pot comanda doar anumite lucrări?",
         srvFaq6A: "Da, putem prelua servicii individuale — de ex. doar montaj SIP, doar acoperiș sau doar fațadă. Pachetul complet este însă cel mai avantajos economic.",
-        srvCtaLang: "Vorbim germană, engleză, rusă și română."
+        srvCtaLang: "Vorbim germană, engleză, rusă și română.",
+        chatTitle: "Consultant online",
+        chatSubtitle: "Întrebați despre casele SIP și construcție",
+        chatGreeting: "Bună ziua! Sunt consultantul Eco Meister Haus. Vă răspund la întrebări despre casele SIP, construcția individuală, termene și prețuri. Cu ce vă pot ajuta?",
+        chatPlaceholder: "Scrieți un mesaj…",
+        chatError: "Nu am putut obține un răspuns. Încercați din nou sau scrieți-ne pe WhatsApp.",
+        chatDisclaimer: "Răspunsurile sunt oferite de un consultant AI. Pentru o ofertă exactă, contactați-ne direct.",
     },
  
     de: {
@@ -1170,6 +1188,12 @@ const translations = {
         srvFaq6Q: "Bieten Sie auch einzelne Gewerke an?",
         srvFaq6A: "Ja, wir können auch einzelne Leistungen übernehmen — z. B. nur SIP-Montage, nur Dach oder nur Fassade. Das Rundum-Paket ist jedoch wirtschaftlich am vorteilhaftesten.",
         srvCtaLang: "Wir sprechen Deutsch, Englisch, Russisch &amp; Rumänisch",
+        chatTitle: "Online-Berater",
+        chatSubtitle: "Fragen Sie zu SIP-Häusern und Bau",
+        chatGreeting: "Hallo! Ich bin der Berater von Eco Meister Haus. Fragen Sie mich zu SIP-Häusern, Individualbau, Bauzeiten und Preisen. Wie kann ich helfen?",
+        chatPlaceholder: "Nachricht schreiben…",
+        chatError: "Antwort konnte nicht geladen werden. Bitte erneut versuchen oder uns per WhatsApp schreiben.",
+        chatDisclaimer: "Antworten werden von einem KI-Berater erstellt. Für ein genaues Angebot kontaktieren Sie uns bitte direkt.",
     }
 };
  
